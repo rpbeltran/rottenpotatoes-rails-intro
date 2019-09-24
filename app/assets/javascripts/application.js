@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function getSortby () {
+
+	var url_string = window.location.href;
+	var url        = new URL(url_string);
+	var sortby     = url.searchParams.get( "sort_by" );
+
+	return sortby;
+
+}
