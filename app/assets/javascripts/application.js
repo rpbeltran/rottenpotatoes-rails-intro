@@ -27,12 +27,19 @@ function getSortby () {
 }
 
 
-document.addEventListener("DOMContentLoaded", function(){
-  var sb = getSortby();
+function hilite () {
+
+	var sb = getSortby();
 
 	if ( sb ) {
 		
 		document.getElementById( sb ).className += " hilite";
 
 	}
-});
+}
+
+document.addEventListener("DOMContentLoaded", hilite );
+document.onload = hilite;
+
+
+
