@@ -27,10 +27,12 @@ function getSortby () {
 }
 
 
-var sb = getSortby();
+document.onload( function () {
+	var sb = getSortby();
 
-if ( sb ) {
-	
-	document.getElementById( sb ).className += " hilite";
+	if ( sb ) {
+		
+		document.getElementById( sb ).className += " hilite";
 
-}
+	}
+} )
