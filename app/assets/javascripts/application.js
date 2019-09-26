@@ -25,3 +25,12 @@ function getSortby () {
 	return sortby;
 
 }
+
+
+var sb = getSortby();
+
+if ( sb ) {
+	
+	document.getElementById( sb ).className += " hilite";
+
+}
