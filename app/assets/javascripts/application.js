@@ -55,6 +55,6 @@ ready( hilite );
 
 function color( el ) {
 
-	document.getElementById( sb ).className += " hilite";
+	document.getElementById( el ).className += " hilite";
 
 }
