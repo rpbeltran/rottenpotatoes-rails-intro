@@ -59,7 +59,7 @@ function color( el ) {
 
 	for( var i = 0; i < hilites.length; i++ ) {
 
-		hilites.className = "movie_header";
+		hilites[i].className = "movie_header";
 
 	}
 
