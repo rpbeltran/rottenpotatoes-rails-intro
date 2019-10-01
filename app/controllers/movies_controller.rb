@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     ratings = params.key?("ratings") ? params[:ratings].keys : @all_ratings
     sort_by = params.key?("sort_by") ? params[:sort_by]      : "title"
 
-    @movies = Movie.all( :conditions => ["rating = ?",ratings] ).order( sort_by )
+    @movies = Movie.where( rating  : ratings ).order( sort_by )
 
     
 
