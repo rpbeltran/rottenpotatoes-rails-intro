@@ -55,7 +55,7 @@ ready( hilite );
 
 function color( el ) {
 
-	var hilites = document.getElementByClassName( "hilite" );
+	var hilites = document.getElementsByClassName( "hilite" );
 
 	for( var i = 0; i < hilites.length; i++ ) {
 
