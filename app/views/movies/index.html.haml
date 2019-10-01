@@ -4,10 +4,10 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-      %th{:id => 'title'        }= link_to 'Movie Title',  '?sort_by=title',        :onclick => "color(\"title\"); return false"
-      %th{:id => 'rating'       }= link_to 'Rating',       '?sort_by=rating',       :onclick => "color(\"rating\"); return false"
-      %th{:id => 'release_date' }= link_to 'Release Date', '?sort_by=release_date', :onclick => "color(\"release_date\"); return false"
-      %th{:id => 'description'  }= link_to 'More Info',    '?sort_by=description',  :onclick => "color(\"description\"); return false"
+      %th{:id => 'title'        }= link_to 'Movie Title',  '?sort_by=title',        :onclick => "color(\"title\"); return false", :class=> "movie_header"
+      %th{:id => 'rating'       }= link_to 'Rating',       '?sort_by=rating',       :onclick => "color(\"rating\"); return false", :class=> "movie_header"
+      %th{:id => 'release_date' }= link_to 'Release Date', '?sort_by=release_date', :onclick => "color(\"release_date\"); return false", :class=> "movie_header"
+      %th{:id => 'description'  }= link_to 'More Info',    '?sort_by=description',  :onclick => "color(\"description\"); return false", :class=> "movie_header"
   %tbody
     - @movies.each do |movie|
       %tr

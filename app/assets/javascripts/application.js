@@ -55,6 +55,16 @@ ready( hilite );
 
 function color( el ) {
 
+	var hilites = document.getElementByClassName( "hilite" );
+
+	for( var i = 0; i < hilites.length; i++ ) {
+
+		hilites.className = "movie_header";
+
+	}
+
 	document.getElementById( el ).className += " hilite";
 
 }
+
+
