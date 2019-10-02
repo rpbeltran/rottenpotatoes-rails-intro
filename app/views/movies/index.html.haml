@@ -11,10 +11,10 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-      %th{:id => 'title'       }= link_to 'Movie Title',  '?sort_by=title',        :class=> "movie_header"
-      %th{:id => 'rating'      }= link_to 'Rating',       '?sort_by=rating',       :class=> "movie_header"
-      %th{:id => 'release_date'}= link_to 'Release Date', '?sort_by=release_date', :class=> "movie_header"
-      %th{:id => 'description' }= link_to 'More Info',    '?sort_by=description',  :class=> "movie_header"
+      %th{:id => 'title'       }= link_to 'Movie Title',  "?#{@ratings_query}sort_by=title",        :class=> "movie_header"
+      %th{:id => 'rating'      }= link_to 'Rating',       "?#{@ratings_query}sort_by=rating",       :class=> "movie_header"
+      %th{:id => 'release_date'}= link_to 'Release Date', "?#{@ratings_query}sort_by=release_date", :class=> "movie_header"
+      %th{:id => 'description' }= link_to 'More Info',    "?#{@ratings_query}sort_by=description",  :class=> "movie_header"
   %tbody
     - @movies.each do |movie|
       %tr

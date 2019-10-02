@@ -12,12 +12,11 @@ class MoviesController < ApplicationController
 
   def index
 
-    @all_ratings = Movie.ratings
-    
-    @ratings = params.key?("ratings") ? params[:ratings].keys : @all_ratings
-    sort_by  = params.key?("sort_by") ? params[:sort_by]      : "title"
-    
-    @movies = Movie.where( rating: @ratings ).order( sort_by )
+    @all_ratings   = Movie.ratings
+    @ratings       = params.key?("ratings") ? params[:ratings].keys : @all_ratings
+    @ratings_query = @ratings.length == 0 ? "" : ( "ratings[" + @ratings.join( "]=1&ratings[" ) + "]=1&" )
+    @sort_by       = params.key?("sort_by") ? params[:sort_by]      : "title"
+    @movies        = Movie.where( rating: @ratings ).order( @sort_by )
 
   end
 
